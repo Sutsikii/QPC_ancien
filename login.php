@@ -4,60 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
     <title>Document</title>
 </head>
 <body>
-<?php
-
-// Validation du formulaire
-if (isset($_POST['email']) &&  isset($_POST['password'])) {
-    foreach ($users as $user) {
-        if (
-            $user['email'] === $_POST['email'] &&
-            $user['password'] === $_POST['password']
-        ) {
-            $loggedUser = [
-                'email' => $user['email'],
-            ];
-        } else {
-            $errorMessage = sprintf('Les informations envoyées ne permettent pas de vous identifier : (%s/%s)',
-                $_POST['email'],
-                $_POST['password']
-            );
-        }
-    }
-}
-?>
-
-<!--
-   Si utilisateur/trice est non identifié(e), on affiche le formulaire
--->
-<?php if(!isset($loggedUser)): ?>
-<form action="quizz.php" method="post">
-    <!-- si message d'erreur on l'affiche -->
-    <?php if(isset($errorMessage)) : ?>
-        <div>
-            <?php echo $errorMessage; ?>
+    <div class="page-root">
+        <div class="login-form">
+            <h1>Question pour un café ! </h1>
+            <form action="" method="POST">
+                <div class="form-name">
+                    <div class="form-label">
+                        <label for="Email"> Email</label>
+                    </div>
+                    <input type="text" name="Email">
+                </div>
+                <div class="form-password">
+                <div class="form-label">
+                    <label for="password"> Mot de passe</label>
+                </div>
+                    <input type="text" name="password">
+                </div>
+                <div class="form-button">
+                <button class="btn"> Se connecter </button>
+                </div>
+            </form>
         </div>
-    <?php endif; ?>
-    <div >
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="you@exemple.com">
-        <div id="email-help">L'email utilisé lors de la création de compte.</div>
+        <div class="footer-link">
+            <div class="footer-root">
+                <div class="signup">
+                    <span> Pas de compte ? <a href="#"> Créer le !</a></span>
+                </div>
+                <div class="span-af-form">
+                    <span><a href="#">© Question Pour un café </a></span>
+                    <span><a href="#">Contact</a></span>
+                    <span><a href="#">RGPD</a></span>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <label for="password">Mot de passe</label>
-        <input type="password">
-    </div>
-    <button type="submit">Envoyer</button>
-</form>
-<!-- 
-    Si utilisateur/trice bien connectée on affiche un message de succès
--->
-<?php else: ?>
-    <div>
-        Bonjour <?php echo $loggedUser['email']; ?> et bienvenue sur le site !
-    </div>
-<?php endif; ?>
 </body>
 </html>
