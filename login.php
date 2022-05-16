@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="css/login.css">
     <title>Document</title>
 </head>
 <body>
-
     <div class="page-root">
         <div class="login-form">
             <h1>Question pour un café ! </h1>
@@ -33,7 +32,7 @@
         <div class="footer-link">
             <div class="footer-root">
                 <div class="signup">
-                    <span> Pas de compte ? <a href="#"> Créer le !</a></span>
+                    <span> Pas de compte ? <a href="signin.php"> Créer le !</a></span>
                 </div>
                 <div class="span-af-form">
                     <span><a href="#">© Question Pour un café </a></span>
@@ -43,7 +42,6 @@
             </div>
         </div>
     </div>
-    <script src="script.js "></script>
     <audio autoplay loop> 
         <source src="assets/qpc-intro.mp3">
     </audio>
