@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <div class="page-root">
         <div class="login-form">
             <h1>Question pour un café ! </h1>
@@ -42,5 +43,9 @@
             </div>
         </div>
     </div>
+    <script src="script.js "></script>
+    <audio autoplay loop> 
+        <source src="assets/qpc-intro.mp3">
+    </audio>
 </body>
 </html>
