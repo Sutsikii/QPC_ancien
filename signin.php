@@ -11,10 +11,10 @@
 <div class="page-root">
         <div class="login-form">
             <h1>Question pour un café ! </h1>
-            <form action="" method="POST">
+            <form action="includes/inscription.php" method="POST">
                 <div class="form-name">
                     <div class="form-label">
-                        <label for="name"> Prénom </label>
+                        <label for="name"> Prénom  </label>
                     </div>
                     <input type="name" name="name">
                 </div>
@@ -22,7 +22,7 @@
                     <div class="form-label">
                         <label for="Email"> Email</label>
                     </div>
-                    <input type="email" name="Email">
+                    <input type="email" name="email">
                 </div>
                 <div class="form-password">
                 <div class="form-label">
@@ -30,14 +30,8 @@
                 </div>
                     <input type="text" name="password">
                 </div>
-                <div class="form-password">
-                <div class="form-label">
-                    <label for="repeat-password"> Confirmer Mot de passe</label>
-                </div>
-                    <input type="text" name="repeat-password">
-                </div>
                 <div class="form-button">
-                <button class="btn"> Se connecter </button>
+                <button class="btn" name="submitSignin"> S'inscrire </button>
                 </div>
             </form>
         </div>
@@ -51,5 +45,10 @@
             </div>
         </div>
     </div>
+    <?php
+
+    include('includes/inscription.php');
+
+    ?>
 </body>
 </html>
